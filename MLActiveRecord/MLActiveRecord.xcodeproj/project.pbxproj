@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98027CFD199E32E200BF3209 /* MLCoreDataStack+ML_Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 98027CFC199E32E200BF3209 /* MLCoreDataStack+ML_Errors.m */; };
+		983B7915199FE859002E5182 /* MLSerializingTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 983B7914199FE859002E5182 /* MLSerializingTestCase.m */; };
+		983B7918199FE86F002E5182 /* MLManagedObjectContextTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 983B7917199FE86F002E5182 /* MLManagedObjectContextTestCase.m */; };
+		98474601199149A600BCA1DA /* NSManagedObject+ML_Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 98474600199149A600BCA1DA /* NSManagedObject+ML_Request.m */; };
+		AA2AF3CF1986373700506502 /* MLCoreDataStack+ML_Saves.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2AF3CE1986373700506502 /* MLCoreDataStack+ML_Saves.m */; };
+		AA36C880197CFADE00820E0A /* NSPredicate+ML.m in Sources */ = {isa = PBXBuildFile; fileRef = AA36C87F197CFADE00820E0A /* NSPredicate+ML.m */; };
+		AA36C883197D068000820E0A /* NSSortDescriptor+ML.m in Sources */ = {isa = PBXBuildFile; fileRef = AA36C882197D068000820E0A /* NSSortDescriptor+ML.m */; };
+		AA36C88A197D22EC00820E0A /* MLCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AA36C889197D22EC00820E0A /* MLCoreDataStack.m */; };
+		AA548BA51988D53300C0CB98 /* MLActiveRecordUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AA548BA41988D53300C0CB98 /* MLActiveRecordUtilities.m */; };
+		AA548BAD1988DA2900C0CB98 /* MLTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AA548BAC1988DA2900C0CB98 /* MLTestCase.m */; };
+		AA548BB01988DA4200C0CB98 /* MLCoreDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AA548BAF1988DA4200C0CB98 /* MLCoreDataTestCase.m */; };
+		AA548BB41988DAA900C0CB98 /* MLTestDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA548BB21988DAA900C0CB98 /* MLTestDataModel.xcdatamodeld */; };
+		AA548BB61988DE4100C0CB98 /* ArtistsList.json in Resources */ = {isa = PBXBuildFile; fileRef = AA548BB51988DE4100C0CB98 /* ArtistsList.json */; };
+		AA548BB81988DF1800C0CB98 /* ArtistInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = AA548BB71988DF1800C0CB98 /* ArtistInfo.json */; };
+		AA548BC81988E29900C0CB98 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB74611977EF51000BAED8 /* CoreData.framework */; };
+		AA548BCB1988E57000C0CB98 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = AA548BCA1988E57000C0CB98 /* Artist.m */; };
+		AA548BCE1988E59200C0CB98 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = AA548BCD1988E59200C0CB98 /* Image.m */; };
+		AA548BDA198931CE00C0CB98 /* MLValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA548BD9198931CE00C0CB98 /* MLValueTransformer.m */; };
+		AA548BDD1989370300C0CB98 /* MLTestCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AA548BDC1989370300C0CB98 /* MLTestCoreDataStack.m */; };
+		AAD034DE1980F1E100B89A14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD034DD1980F1E100B89A14 /* UIKit.framework */; };
+		AAD034E21980FBB800B89A14 /* MLSQLiteCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD034E11980FBB800B89A14 /* MLSQLiteCoreDataStack.m */; };
+		AAD034E51981183400B89A14 /* MLInMemoryCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD034E41981183400B89A14 /* MLInMemoryCoreDataStack.m */; };
+		AAD034E9198135B100B89A14 /* NSManagedObjectContext+ML_Observing.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD034E8198135B100B89A14 /* NSManagedObjectContext+ML_Observing.m */; };
+		AAD034EC19813F5B00B89A14 /* MLSavingContextSQLCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD034EB19813F5B00B89A14 /* MLSavingContextSQLCoreDataStack.m */; };
+		AAD034EF198144E500B89A14 /* NSManagedObjectModel+ML.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD034EE198144E500B89A14 /* NSManagedObjectModel+ML.m */; };
+		AAD034FB198149AA00B89A14 /* MLSavingContextInMemoryCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD034FA198149AA00B89A14 /* MLSavingContextInMemoryCoreDataStack.m */; };
+		AADB73F91977EAD0000BAED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB73F81977EAD0000BAED8 /* Foundation.framework */; };
+		AADB73FE1977EAD0000BAED8 /* MLActiveRecord.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AADB73FD1977EAD0000BAED8 /* MLActiveRecord.h */; };
+		AADB74071977EAD0000BAED8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB74061977EAD0000BAED8 /* XCTest.framework */; };
+		AADB74081977EAD0000BAED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB73F81977EAD0000BAED8 /* Foundation.framework */; };
+		AADB740D1977EAD0000BAED8 /* libMLActiveRecord.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB73F51977EAD0000BAED8 /* libMLActiveRecord.a */; };
+		AADB74131977EAD0000BAED8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AADB74111977EAD0000BAED8 /* InfoPlist.strings */; };
+		AADB74621977EF51000BAED8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADB74611977EF51000BAED8 /* CoreData.framework */; };
+		AADB74681977EFF2000BAED8 /* NSManagedObjectContext+ML_Saves.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB74671977EFF2000BAED8 /* NSManagedObjectContext+ML_Saves.m */; };
+		AADB746B1977F375000BAED8 /* NSManagedObject+ML_Finders.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB746A1977F375000BAED8 /* NSManagedObject+ML_Finders.m */; };
+		AADB746E1977F3A6000BAED8 /* NSManagedObject+ML.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB746D1977F3A6000BAED8 /* NSManagedObject+ML.m */; };
+		AADB74711977F494000BAED8 /* NSManagedObject+ML_Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB74701977F494000BAED8 /* NSManagedObject+ML_Serialization.m */; };
+		AADB74741977F8C1000BAED8 /* NSManagedObjectContext+ML.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB74731977F8C1000BAED8 /* NSManagedObjectContext+ML.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AADB740B1977EAD0000BAED8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AADB73ED1977EAD0000BAED8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AADB73F41977EAD0000BAED8;
+			remoteInfo = PGActiveRecord;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AADB73F31977EAD0000BAED8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				AADB73FE1977EAD0000BAED8 /* MLActiveRecord.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		98027CFB199E32E200BF3209 /* MLCoreDataStack+ML_Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MLCoreDataStack+ML_Errors.h"; sourceTree = "<group>"; };
+		98027CFC199E32E200BF3209 /* MLCoreDataStack+ML_Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MLCoreDataStack+ML_Errors.m"; sourceTree = "<group>"; };
+		983B7913199FE859002E5182 /* MLSerializingTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSerializingTestCase.h; sourceTree = "<group>"; };
+		983B7914199FE859002E5182 /* MLSerializingTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSerializingTestCase.m; sourceTree = "<group>"; };
+		983B7916199FE86F002E5182 /* MLManagedObjectContextTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLManagedObjectContextTestCase.h; sourceTree = "<group>"; };
+		983B7917199FE86F002E5182 /* MLManagedObjectContextTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLManagedObjectContextTestCase.m; sourceTree = "<group>"; };
+		984745FF199149A600BCA1DA /* NSManagedObject+ML_Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ML_Request.h"; sourceTree = "<group>"; };
+		98474600199149A600BCA1DA /* NSManagedObject+ML_Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ML_Request.m"; sourceTree = "<group>"; };
+		AA2AF3CD1986373700506502 /* MLCoreDataStack+ML_Saves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MLCoreDataStack+ML_Saves.h"; sourceTree = "<group>"; };
+		AA2AF3CE1986373700506502 /* MLCoreDataStack+ML_Saves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MLCoreDataStack+ML_Saves.m"; sourceTree = "<group>"; };
+		AA36C87E197CFADE00820E0A /* NSPredicate+ML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPredicate+ML.h"; sourceTree = "<group>"; };
+		AA36C87F197CFADE00820E0A /* NSPredicate+ML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPredicate+ML.m"; sourceTree = "<group>"; };
+		AA36C881197D068000820E0A /* NSSortDescriptor+ML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSortDescriptor+ML.h"; sourceTree = "<group>"; };
+		AA36C882197D068000820E0A /* NSSortDescriptor+ML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSortDescriptor+ML.m"; sourceTree = "<group>"; };
+		AA36C884197D214E00820E0A /* MLActiveRecordDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLActiveRecordDefines.h; sourceTree = "<group>"; };
+		AA36C888197D22EC00820E0A /* MLCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCoreDataStack.h; sourceTree = "<group>"; };
+		AA36C889197D22EC00820E0A /* MLCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCoreDataStack.m; sourceTree = "<group>"; };
+		AA548BA31988D53300C0CB98 /* MLActiveRecordUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLActiveRecordUtilities.h; sourceTree = "<group>"; };
+		AA548BA41988D53300C0CB98 /* MLActiveRecordUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLActiveRecordUtilities.m; sourceTree = "<group>"; };
+		AA548BAB1988DA2900C0CB98 /* MLTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTestCase.h; sourceTree = "<group>"; };
+		AA548BAC1988DA2900C0CB98 /* MLTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTestCase.m; sourceTree = "<group>"; };
+		AA548BAE1988DA4200C0CB98 /* MLCoreDataTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCoreDataTestCase.h; sourceTree = "<group>"; };
+		AA548BAF1988DA4200C0CB98 /* MLCoreDataTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCoreDataTestCase.m; sourceTree = "<group>"; };
+		AA548BB31988DAA900C0CB98 /* MLTestDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MLTestDataModel.xcdatamodel; sourceTree = "<group>"; };
+		AA548BB51988DE4100C0CB98 /* ArtistsList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ArtistsList.json; sourceTree = "<group>"; };
+		AA548BB71988DF1800C0CB98 /* ArtistInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ArtistInfo.json; sourceTree = "<group>"; };
+		AA548BC91988E57000C0CB98 /* Artist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		AA548BCA1988E57000C0CB98 /* Artist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		AA548BCC1988E59200C0CB98 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		AA548BCD1988E59200C0CB98 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		AA548BD8198931CE00C0CB98 /* MLValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLValueTransformer.h; sourceTree = "<group>"; };
+		AA548BD9198931CE00C0CB98 /* MLValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLValueTransformer.m; sourceTree = "<group>"; };
+		AA548BDB1989370300C0CB98 /* MLTestCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTestCoreDataStack.h; sourceTree = "<group>"; };
+		AA548BDC1989370300C0CB98 /* MLTestCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTestCoreDataStack.m; sourceTree = "<group>"; };
+		AAD034DD1980F1E100B89A14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AAD034E01980FBB800B89A14 /* MLSQLiteCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSQLiteCoreDataStack.h; sourceTree = "<group>"; };
+		AAD034E11980FBB800B89A14 /* MLSQLiteCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSQLiteCoreDataStack.m; sourceTree = "<group>"; };
+		AAD034E31981183400B89A14 /* MLInMemoryCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLInMemoryCoreDataStack.h; sourceTree = "<group>"; };
+		AAD034E41981183400B89A14 /* MLInMemoryCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLInMemoryCoreDataStack.m; sourceTree = "<group>"; };
+		AAD034E7198135B100B89A14 /* NSManagedObjectContext+ML_Observing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+ML_Observing.h"; sourceTree = "<group>"; };
+		AAD034E8198135B100B89A14 /* NSManagedObjectContext+ML_Observing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+ML_Observing.m"; sourceTree = "<group>"; };
+		AAD034EA19813F5B00B89A14 /* MLSavingContextSQLCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSavingContextSQLCoreDataStack.h; sourceTree = "<group>"; };
+		AAD034EB19813F5B00B89A14 /* MLSavingContextSQLCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSavingContextSQLCoreDataStack.m; sourceTree = "<group>"; };
+		AAD034ED198144E500B89A14 /* NSManagedObjectModel+ML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectModel+ML.h"; sourceTree = "<group>"; };
+		AAD034EE198144E500B89A14 /* NSManagedObjectModel+ML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectModel+ML.m"; sourceTree = "<group>"; };
+		AAD034F9198149AA00B89A14 /* MLSavingContextInMemoryCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSavingContextInMemoryCoreDataStack.h; sourceTree = "<group>"; };
+		AAD034FA198149AA00B89A14 /* MLSavingContextInMemoryCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSavingContextInMemoryCoreDataStack.m; sourceTree = "<group>"; };
+		AADB73F51977EAD0000BAED8 /* libMLActiveRecord.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMLActiveRecord.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADB73F81977EAD0000BAED8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AADB73FC1977EAD0000BAED8 /* MLActiveRecord-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLActiveRecord-Prefix.pch"; sourceTree = "<group>"; };
+		AADB73FD1977EAD0000BAED8 /* MLActiveRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLActiveRecord.h; sourceTree = "<group>"; };
+		AADB74051977EAD0000BAED8 /* MLActiveRecordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLActiveRecordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADB74061977EAD0000BAED8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AADB74101977EAD0000BAED8 /* MLActiveRecordTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MLActiveRecordTests-Info.plist"; sourceTree = "<group>"; };
+		AADB74121977EAD0000BAED8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AADB74611977EF51000BAED8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AADB74661977EFF2000BAED8 /* NSManagedObjectContext+ML_Saves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+ML_Saves.h"; sourceTree = "<group>"; };
+		AADB74671977EFF2000BAED8 /* NSManagedObjectContext+ML_Saves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+ML_Saves.m"; sourceTree = "<group>"; };
+		AADB74691977F375000BAED8 /* NSManagedObject+ML_Finders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ML_Finders.h"; sourceTree = "<group>"; };
+		AADB746A1977F375000BAED8 /* NSManagedObject+ML_Finders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ML_Finders.m"; sourceTree = "<group>"; };
+		AADB746C1977F3A6000BAED8 /* NSManagedObject+ML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ML.h"; sourceTree = "<group>"; };
+		AADB746D1977F3A6000BAED8 /* NSManagedObject+ML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ML.m"; sourceTree = "<group>"; };
+		AADB746F1977F494000BAED8 /* NSManagedObject+ML_Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ML_Serialization.h"; sourceTree = "<group>"; };
+		AADB74701977F494000BAED8 /* NSManagedObject+ML_Serialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ML_Serialization.m"; sourceTree = "<group>"; };
+		AADB74721977F8C1000BAED8 /* NSManagedObjectContext+ML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+ML.h"; sourceTree = "<group>"; };
+		AADB74731977F8C1000BAED8 /* NSManagedObjectContext+ML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+ML.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AADB73F21977EAD0000BAED8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADB73F91977EAD0000BAED8 /* Foundation.framework in Frameworks */,
+				AAD034DE1980F1E100B89A14 /* UIKit.framework in Frameworks */,
+				AADB74621977EF51000BAED8 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADB74021977EAD0000BAED8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADB74071977EAD0000BAED8 /* XCTest.framework in Frameworks */,
+				AADB74081977EAD0000BAED8 /* Foundation.framework in Frameworks */,
+				AA548BC81988E29900C0CB98 /* CoreData.framework in Frameworks */,
+				AADB740D1977EAD0000BAED8 /* libMLActiveRecord.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA548BA61988D53900C0CB98 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AA548BA31988D53300C0CB98 /* MLActiveRecordUtilities.h */,
+				AA548BA41988D53300C0CB98 /* MLActiveRecordUtilities.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		AA548BA71988D99E00C0CB98 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AA548BAA1988DA0700C0CB98 /* Abstract */,
+				983B7913199FE859002E5182 /* MLSerializingTestCase.h */,
+				983B7914199FE859002E5182 /* MLSerializingTestCase.m */,
+				983B7916199FE86F002E5182 /* MLManagedObjectContextTestCase.h */,
+				983B7917199FE86F002E5182 /* MLManagedObjectContextTestCase.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		AA548BA81988D9A400C0CB98 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA548BB71988DF1800C0CB98 /* ArtistInfo.json */,
+				AA548BB51988DE4100C0CB98 /* ArtistsList.json */,
+				AA548BB21988DAA900C0CB98 /* MLTestDataModel.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA548BAA1988DA0700C0CB98 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				AA548BAB1988DA2900C0CB98 /* MLTestCase.h */,
+				AA548BAC1988DA2900C0CB98 /* MLTestCase.m */,
+				AA548BAE1988DA4200C0CB98 /* MLCoreDataTestCase.h */,
+				AA548BAF1988DA4200C0CB98 /* MLCoreDataTestCase.m */,
+			);
+			name = Abstract;
+			sourceTree = "<group>";
+		};
+		AA548BB11988DA4800C0CB98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA548BC91988E57000C0CB98 /* Artist.h */,
+				AA548BCA1988E57000C0CB98 /* Artist.m */,
+				AA548BCC1988E59200C0CB98 /* Image.h */,
+				AA548BCD1988E59200C0CB98 /* Image.m */,
+				AA548BD8198931CE00C0CB98 /* MLValueTransformer.h */,
+				AA548BD9198931CE00C0CB98 /* MLValueTransformer.m */,
+				AA548BDB1989370300C0CB98 /* MLTestCoreDataStack.h */,
+				AA548BDC1989370300C0CB98 /* MLTestCoreDataStack.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AAD034F3198148C400B89A14 /* Core Data Stacks */ = {
+			isa = PBXGroup;
+			children = (
+				AA36C888197D22EC00820E0A /* MLCoreDataStack.h */,
+				AA36C889197D22EC00820E0A /* MLCoreDataStack.m */,
+				AA2AF3CD1986373700506502 /* MLCoreDataStack+ML_Saves.h */,
+				AA2AF3CE1986373700506502 /* MLCoreDataStack+ML_Saves.m */,
+				98027CFB199E32E200BF3209 /* MLCoreDataStack+ML_Errors.h */,
+				98027CFC199E32E200BF3209 /* MLCoreDataStack+ML_Errors.m */,
+				AAD034E01980FBB800B89A14 /* MLSQLiteCoreDataStack.h */,
+				AAD034E11980FBB800B89A14 /* MLSQLiteCoreDataStack.m */,
+				AAD034EA19813F5B00B89A14 /* MLSavingContextSQLCoreDataStack.h */,
+				AAD034EB19813F5B00B89A14 /* MLSavingContextSQLCoreDataStack.m */,
+				AAD034E31981183400B89A14 /* MLInMemoryCoreDataStack.h */,
+				AAD034E41981183400B89A14 /* MLInMemoryCoreDataStack.m */,
+				AAD034F9198149AA00B89A14 /* MLSavingContextInMemoryCoreDataStack.h */,
+				AAD034FA198149AA00B89A14 /* MLSavingContextInMemoryCoreDataStack.m */,
+			);
+			name = "Core Data Stacks";
+			sourceTree = "<group>";
+		};
+		AAD034F4198148D200B89A14 /* ManagedObject Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AADB746C1977F3A6000BAED8 /* NSManagedObject+ML.h */,
+				AADB746D1977F3A6000BAED8 /* NSManagedObject+ML.m */,
+				AADB74691977F375000BAED8 /* NSManagedObject+ML_Finders.h */,
+				AADB746A1977F375000BAED8 /* NSManagedObject+ML_Finders.m */,
+				984745FF199149A600BCA1DA /* NSManagedObject+ML_Request.h */,
+				98474600199149A600BCA1DA /* NSManagedObject+ML_Request.m */,
+				AADB746F1977F494000BAED8 /* NSManagedObject+ML_Serialization.h */,
+				AADB74701977F494000BAED8 /* NSManagedObject+ML_Serialization.m */,
+			);
+			name = "ManagedObject Categories";
+			sourceTree = "<group>";
+		};
+		AAD034F5198148DD00B89A14 /* ManagedObjectContext Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AADB74721977F8C1000BAED8 /* NSManagedObjectContext+ML.h */,
+				AADB74731977F8C1000BAED8 /* NSManagedObjectContext+ML.m */,
+				AADB74661977EFF2000BAED8 /* NSManagedObjectContext+ML_Saves.h */,
+				AADB74671977EFF2000BAED8 /* NSManagedObjectContext+ML_Saves.m */,
+				AAD034E7198135B100B89A14 /* NSManagedObjectContext+ML_Observing.h */,
+				AAD034E8198135B100B89A14 /* NSManagedObjectContext+ML_Observing.m */,
+			);
+			name = "ManagedObjectContext Categories";
+			sourceTree = "<group>";
+		};
+		AAD034F61981493700B89A14 /* ManagedObjectModel Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AAD034ED198144E500B89A14 /* NSManagedObjectModel+ML.h */,
+				AAD034EE198144E500B89A14 /* NSManagedObjectModel+ML.m */,
+			);
+			name = "ManagedObjectModel Categories";
+			sourceTree = "<group>";
+		};
+		AAD034F71981495500B89A14 /* Predicate Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AA36C87E197CFADE00820E0A /* NSPredicate+ML.h */,
+				AA36C87F197CFADE00820E0A /* NSPredicate+ML.m */,
+			);
+			name = "Predicate Categories";
+			sourceTree = "<group>";
+		};
+		AAD034F81981496500B89A14 /* SortDescriptor Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AA36C881197D068000820E0A /* NSSortDescriptor+ML.h */,
+				AA36C882197D068000820E0A /* NSSortDescriptor+ML.m */,
+			);
+			name = "SortDescriptor Categories";
+			sourceTree = "<group>";
+		};
+		AADB73EC1977EAD0000BAED8 = {
+			isa = PBXGroup;
+			children = (
+				AADB73FA1977EAD0000BAED8 /* MLActiveRecord */,
+				AADB740E1977EAD0000BAED8 /* MLActiveRecordTests */,
+				AADB73F71977EAD0000BAED8 /* Frameworks */,
+				AADB73F61977EAD0000BAED8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AADB73F61977EAD0000BAED8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AADB73F51977EAD0000BAED8 /* libMLActiveRecord.a */,
+				AADB74051977EAD0000BAED8 /* MLActiveRecordTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AADB73F71977EAD0000BAED8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAD034DD1980F1E100B89A14 /* UIKit.framework */,
+				AADB74611977EF51000BAED8 /* CoreData.framework */,
+				AADB73F81977EAD0000BAED8 /* Foundation.framework */,
+				AADB74061977EAD0000BAED8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AADB73FA1977EAD0000BAED8 /* MLActiveRecord */ = {
+			isa = PBXGroup;
+			children = (
+				AADB745F1977EB22000BAED8 /* Source */,
+				AADB73FB1977EAD0000BAED8 /* Supporting Files */,
+			);
+			path = MLActiveRecord;
+			sourceTree = "<group>";
+		};
+		AADB73FB1977EAD0000BAED8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AADB73FC1977EAD0000BAED8 /* MLActiveRecord-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AADB740E1977EAD0000BAED8 /* MLActiveRecordTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA548BB11988DA4800C0CB98 /* Models */,
+				AA548BA71988D99E00C0CB98 /* Tests */,
+				AA548BA81988D9A400C0CB98 /* Resources */,
+				AADB740F1977EAD0000BAED8 /* Supporting Files */,
+			);
+			path = MLActiveRecordTests;
+			sourceTree = "<group>";
+		};
+		AADB740F1977EAD0000BAED8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AADB74101977EAD0000BAED8 /* MLActiveRecordTests-Info.plist */,
+				AADB74111977EAD0000BAED8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AADB745F1977EB22000BAED8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AADB73FD1977EAD0000BAED8 /* MLActiveRecord.h */,
+				AA36C884197D214E00820E0A /* MLActiveRecordDefines.h */,
+				AAD034F3198148C400B89A14 /* Core Data Stacks */,
+				AAD034F4198148D200B89A14 /* ManagedObject Categories */,
+				AAD034F5198148DD00B89A14 /* ManagedObjectContext Categories */,
+				AAD034F61981493700B89A14 /* ManagedObjectModel Categories */,
+				AAD034F71981495500B89A14 /* Predicate Categories */,
+				AAD034F81981496500B89A14 /* SortDescriptor Categories */,
+				AA548BA61988D53900C0CB98 /* Utilities */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AADB73F41977EAD0000BAED8 /* MLActiveRecord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADB74181977EAD0000BAED8 /* Build configuration list for PBXNativeTarget "MLActiveRecord" */;
+			buildPhases = (
+				AADB73F11977EAD0000BAED8 /* Sources */,
+				AADB73F21977EAD0000BAED8 /* Frameworks */,
+				AADB73F31977EAD0000BAED8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MLActiveRecord;
+			productName = MLActiveRecord;
+			productReference = AADB73F51977EAD0000BAED8 /* libMLActiveRecord.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AADB74041977EAD0000BAED8 /* MLActiveRecordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADB741B1977EAD0000BAED8 /* Build configuration list for PBXNativeTarget "MLActiveRecordTests" */;
+			buildPhases = (
+				AADB74021977EAD0000BAED8 /* Frameworks */,
+				AADB74011977EAD0000BAED8 /* Sources */,
+				AADB74031977EAD0000BAED8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AADB740C1977EAD0000BAED8 /* PBXTargetDependency */,
+			);
+			name = MLActiveRecordTests;
+			productName = MLActiveRecordTests;
+			productReference = AADB74051977EAD0000BAED8 /* MLActiveRecordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AADB73ED1977EAD0000BAED8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ML;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Joachim Kret";
+			};
+			buildConfigurationList = AADB73F01977EAD0000BAED8 /* Build configuration list for PBXProject "MLActiveRecord" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AADB73EC1977EAD0000BAED8;
+			productRefGroup = AADB73F61977EAD0000BAED8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AADB73F41977EAD0000BAED8 /* MLActiveRecord */,
+				AADB74041977EAD0000BAED8 /* MLActiveRecordTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AADB74031977EAD0000BAED8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA548BB81988DF1800C0CB98 /* ArtistInfo.json in Resources */,
+				AA548BB61988DE4100C0CB98 /* ArtistsList.json in Resources */,
+				AADB74131977EAD0000BAED8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AADB73F11977EAD0000BAED8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAD034E21980FBB800B89A14 /* MLSQLiteCoreDataStack.m in Sources */,
+				AADB746B1977F375000BAED8 /* NSManagedObject+ML_Finders.m in Sources */,
+				AA548BA51988D53300C0CB98 /* MLActiveRecordUtilities.m in Sources */,
+				AA36C880197CFADE00820E0A /* NSPredicate+ML.m in Sources */,
+				AA36C883197D068000820E0A /* NSSortDescriptor+ML.m in Sources */,
+				AAD034E51981183400B89A14 /* MLInMemoryCoreDataStack.m in Sources */,
+				AAD034EF198144E500B89A14 /* NSManagedObjectModel+ML.m in Sources */,
+				AADB74681977EFF2000BAED8 /* NSManagedObjectContext+ML_Saves.m in Sources */,
+				AA2AF3CF1986373700506502 /* MLCoreDataStack+ML_Saves.m in Sources */,
+				AADB74711977F494000BAED8 /* NSManagedObject+ML_Serialization.m in Sources */,
+				AA36C88A197D22EC00820E0A /* MLCoreDataStack.m in Sources */,
+				AADB74741977F8C1000BAED8 /* NSManagedObjectContext+ML.m in Sources */,
+				98027CFD199E32E200BF3209 /* MLCoreDataStack+ML_Errors.m in Sources */,
+				98474601199149A600BCA1DA /* NSManagedObject+ML_Request.m in Sources */,
+				AAD034E9198135B100B89A14 /* NSManagedObjectContext+ML_Observing.m in Sources */,
+				AADB746E1977F3A6000BAED8 /* NSManagedObject+ML.m in Sources */,
+				AAD034FB198149AA00B89A14 /* MLSavingContextInMemoryCoreDataStack.m in Sources */,
+				AAD034EC19813F5B00B89A14 /* MLSavingContextSQLCoreDataStack.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADB74011977EAD0000BAED8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA548BDD1989370300C0CB98 /* MLTestCoreDataStack.m in Sources */,
+				AA548BCB1988E57000C0CB98 /* Artist.m in Sources */,
+				983B7918199FE86F002E5182 /* MLManagedObjectContextTestCase.m in Sources */,
+				AA548BCE1988E59200C0CB98 /* Image.m in Sources */,
+				AA548BAD1988DA2900C0CB98 /* MLTestCase.m in Sources */,
+				AA548BB41988DAA900C0CB98 /* MLTestDataModel.xcdatamodeld in Sources */,
+				983B7915199FE859002E5182 /* MLSerializingTestCase.m in Sources */,
+				AA548BDA198931CE00C0CB98 /* MLValueTransformer.m in Sources */,
+				AA548BB01988DA4200C0CB98 /* MLCoreDataTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AADB740C1977EAD0000BAED8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AADB73F41977EAD0000BAED8 /* MLActiveRecord */;
+			targetProxy = AADB740B1977EAD0000BAED8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AADB74111977EAD0000BAED8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AADB74121977EAD0000BAED8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AADB74161977EAD0000BAED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AADB74171977EAD0000BAED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AADB74191977EAD0000BAED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/MLActiveRecord.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MLActiveRecord/MLActiveRecord-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = MLActiveRecord;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AADB741A1977EAD0000BAED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/MLActiveRecord.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MLActiveRecord/MLActiveRecord-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = MLActiveRecord;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AADB741C1977EAD0000BAED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MLActiveRecord/MLActiveRecord-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MLActiveRecordTests/MLActiveRecordTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
+				PRODUCT_NAME = MLActiveRecordTests;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AADB741D1977EAD0000BAED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MLActiveRecord/MLActiveRecord-Prefix.pch";
+				INFOPLIST_FILE = "MLActiveRecordTests/MLActiveRecordTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
+				PRODUCT_NAME = MLActiveRecordTests;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AADB73F01977EAD0000BAED8 /* Build configuration list for PBXProject "MLActiveRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADB74161977EAD0000BAED8 /* Debug */,
+				AADB74171977EAD0000BAED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADB74181977EAD0000BAED8 /* Build configuration list for PBXNativeTarget "MLActiveRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADB74191977EAD0000BAED8 /* Debug */,
+				AADB741A1977EAD0000BAED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADB741B1977EAD0000BAED8 /* Build configuration list for PBXNativeTarget "MLActiveRecordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADB741C1977EAD0000BAED8 /* Debug */,
+				AADB741D1977EAD0000BAED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AA548BB21988DAA900C0CB98 /* MLTestDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AA548BB31988DAA900C0CB98 /* MLTestDataModel.xcdatamodel */,
+			);
+			currentVersion = AA548BB31988DAA900C0CB98 /* MLTestDataModel.xcdatamodel */;
+			path = MLTestDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AADB73ED1977EAD0000BAED8 /* Project object */;
+}
