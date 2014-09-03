@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A21D5F8F-7065-4AFE-8073-555D484DF3CD</string>
+	<string>FC6249DC-F1D0-4ABD-A427-4061352F8F3A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MLActiveRecord</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>FAA29C94-541B-49DF-9185-0197D4574F48</key>
-		<string>file:///Volumes/Achim/PGActiveRecord.git/</string>
+		<key>F48E7F88-9F4F-4A5B-8C76-A6701ADD1833</key>
+		<string>https://github.com/achimk/MLActiveRecord.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MLActiveRecord.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FAA29C94-541B-49DF-9185-0197D4574F48</key>
+		<key>F48E7F88-9F4F-4A5B-8C76-A6701ADD1833</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>file:///Volumes/Achim/PGActiveRecord.git/</string>
+	<string>https://github.com/achimk/MLActiveRecord.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FAA29C94-541B-49DF-9185-0197D4574F48</string>
+	<string>F48E7F88-9F4F-4A5B-8C76-A6701ADD1833</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FAA29C94-541B-49DF-9185-0197D4574F48</string>
+			<string>F48E7F88-9F4F-4A5B-8C76-A6701ADD1833</string>
 			<key>IDESourceControlWCCName</key>
-			<string>PGActiveRecord</string>
+			<string>MLActiveRecord</string>
 		</dict>
 	</array>
 </dict>

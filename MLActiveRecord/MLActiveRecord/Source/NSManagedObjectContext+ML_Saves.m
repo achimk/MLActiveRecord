@@ -7,24 +7,25 @@
 
 #import "NSManagedObjectContext+ML_Saves.h"
 
+#import "NSManagedObjectContext+ML.h"
 #import "MLActiveRecordDefines.h"
 
 #define CALL_COMPLETION_BLOCK(onMainThread, block, isSuccess, error) \
 if (!block) { \
-    return; \
+return; \
 } \
 else if (onMainThread) { \
-    if ([NSThread isMainThread]) { \
-        block(isSuccess, error); \
-    } \
-    else { \
-        dispatch_async(dispatch_get_main_queue(), ^{ \
-            block(isSuccess, error); \
-        }); \
-    } \
+if ([NSThread isMainThread]) { \
+block(isSuccess, error); \
 } \
 else { \
-    block(isSuccess, error); \
+dispatch_async(dispatch_get_main_queue(), ^{ \
+block(isSuccess, error); \
+}); \
+} \
+} \
+else { \
+block(isSuccess, error); \
 } \
 
 @implementation NSManagedObjectContext (ML_Saves)
@@ -38,7 +39,7 @@ else { \
             *error = saveError;
         }
     };
-
+    
     [self ml_saveWithOptions:MLSaveSynchronously | MLSaveCompleteOnMainDispatchQueue completion:completionHandler];
     
     return saveSuccess;
@@ -57,7 +58,7 @@ else { \
             *error = saveError;
         }
     };
-
+    
     [self ml_saveWithOptions:MLSaveParentContexts | MLSaveSynchronously | MLSaveCompleteOnMainDispatchQueue completion:completionHandler];
     
     return saveSuccess;
@@ -121,7 +122,7 @@ else { \
                 if ((YES == saveParentContexts) && [self parentContext]) {
                     if (shouldCompleteOnMainContext && NSMainQueueConcurrencyType == self.concurrencyType) {
                         CALL_COMPLETION_BLOCK(shouldCompleteOnMainDispatchQueue, completion, saved, error);
-
+                        
                         [[self parentContext] ml_saveWithOptions:options completion:nil];
                     }
                     else {
@@ -156,6 +157,24 @@ else { \
     else {
         [self performBlock:saveBlock];
     }
+}
+
+- (void)ml_performBlock:(void(^)())block andSaveWithCompletion:(MLSaveCompletionHandler)completion {
+    [self ml_saveWithOptions:MLSaveCompleteOnMainDispatchQueue block:block completion:completion];
+}
+
+- (void)ml_performBlock:(void(^)())block andSaveStackWithCompletion:(MLSaveCompletionHandler)completion {
+    [self ml_saveWithOptions:MLSaveParentContexts | MLSaveCompleteOnMainDispatchQueue block:block completion:completion];
+}
+
+- (void)ml_saveWithOptions:(MLSaveOptions)options block:(void(^)())block completion:(MLSaveCompletionHandler)completion {
+    [self ml_performBlock:^{
+        if (block) {
+            block();
+        }
+        
+        [self ml_saveWithOptions:options completion:completion];
+    }];
 }
 
 @end
