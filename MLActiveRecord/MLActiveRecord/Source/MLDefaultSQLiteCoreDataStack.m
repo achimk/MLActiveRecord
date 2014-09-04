@@ -1,26 +1,21 @@
 //
-//  MLSavingContextSQLCoreDataStack.m
+//  MLDefaultSQLiteCoreDataStack.m
 //  MLActiveRecord
 //
-//  Created by Joachim Kret on 24/07/14.
+//  Created by Joachim Kret on 04/09/14.
+//  Copyright (c) 2014 Joachim Kret. All rights reserved.
 //
 
-#import "MLSavingContextSQLCoreDataStack.h"
+#import "MLDefaultSQLiteCoreDataStack.h"
 
 #import "MLCoreDataStack+ML_Saves.h"
 #import "NSManagedObjectContext+ML.h"
-#import "NSManagedObjectContext+ML_Observing.h"
 
-@implementation MLSavingContextSQLCoreDataStack
+@implementation MLDefaultSQLiteCoreDataStack
 
 @synthesize persistentContext = _persistentContext;
 @synthesize mainContext = _mainContext;
-
-#pragma mark Dealloc
-
-- (void)dealloc {
-    [_mainContext ml_stopObservingContextDidSave:_persistentContext];
-}
+@synthesize saveContext = _saveContext;
 
 #pragma mark Load Stack
 
@@ -29,6 +24,7 @@
     
     [self persistentContext];
     [self mainContext];
+    [self saveContext];
 }
 
 #pragma mark Accessors
@@ -44,7 +40,7 @@
         return self.mainContext;
     }
     else {
-        return self.persistentContext;
+        return self.saveContext;
     }
 }
 
@@ -60,15 +56,23 @@
 - (NSManagedObjectContext *)mainContext {
     if (!_mainContext) {
         _mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-        _mainContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
-        [_mainContext ml_observeContextDidSave:self.persistentContext];
+        _mainContext.parentContext = self.persistentContext;
     }
     
     return _mainContext;
 }
 
+- (NSManagedObjectContext *)saveContext {
+    if (!_saveContext) {
+        _saveContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        _saveContext.parentContext = self.mainContext;
+    }
+    
+    return _saveContext;
+}
+
 - (NSManagedObjectContext *)stackSavingContext {
-    return self.persistentContext;
+    return self.saveContext;
 }
 
 @end

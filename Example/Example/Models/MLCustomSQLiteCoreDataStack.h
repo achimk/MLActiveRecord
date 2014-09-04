@@ -9,8 +9,8 @@
 
 @interface MLCustomSQLiteCoreDataStack : MLSQLiteCoreDataStack
 
-@property (nonatomic, readonly, strong) NSManagedObjectContext * savingContext;
-@property (nonatomic, readonly, strong) NSManagedObjectContext * mainContext;
-@property (nonatomic, readonly, strong) NSManagedObjectContext * backgroundContext;
+@property (nonatomic, readonly, strong) NSManagedObjectContext * savingContext;     // pesistent context
+@property (nonatomic, readonly, strong) NSManagedObjectContext * mainContext;       // UI updates
+@property (nonatomic, readonly, strong) NSManagedObjectContext * backgroundContext; // create / update / delete
 
 @end

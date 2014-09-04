@@ -12,6 +12,8 @@
 		983B7918199FE86F002E5182 /* MLManagedObjectContextTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 983B7917199FE86F002E5182 /* MLManagedObjectContextTestCase.m */; };
 		98474601199149A600BCA1DA /* NSManagedObject+ML_Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 98474600199149A600BCA1DA /* NSManagedObject+ML_Request.m */; };
 		AA2AF3CF1986373700506502 /* MLCoreDataStack+ML_Saves.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2AF3CE1986373700506502 /* MLCoreDataStack+ML_Saves.m */; };
+		AA2C30D619B89D1B00B3C3DD /* MLDefaultSQLiteCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2C30D519B89D1B00B3C3DD /* MLDefaultSQLiteCoreDataStack.m */; };
+		AA2C30D919B89D3400B3C3DD /* MLDefaultInMemoryCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2C30D819B89D3400B3C3DD /* MLDefaultInMemoryCoreDataStack.m */; };
 		AA36C880197CFADE00820E0A /* NSPredicate+ML.m in Sources */ = {isa = PBXBuildFile; fileRef = AA36C87F197CFADE00820E0A /* NSPredicate+ML.m */; };
 		AA36C883197D068000820E0A /* NSSortDescriptor+ML.m in Sources */ = {isa = PBXBuildFile; fileRef = AA36C882197D068000820E0A /* NSSortDescriptor+ML.m */; };
 		AA36C88A197D22EC00820E0A /* MLCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AA36C889197D22EC00820E0A /* MLCoreDataStack.m */; };
@@ -81,6 +83,10 @@
 		98474600199149A600BCA1DA /* NSManagedObject+ML_Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ML_Request.m"; sourceTree = "<group>"; };
 		AA2AF3CD1986373700506502 /* MLCoreDataStack+ML_Saves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MLCoreDataStack+ML_Saves.h"; sourceTree = "<group>"; };
 		AA2AF3CE1986373700506502 /* MLCoreDataStack+ML_Saves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MLCoreDataStack+ML_Saves.m"; sourceTree = "<group>"; };
+		AA2C30D419B89D1B00B3C3DD /* MLDefaultSQLiteCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLDefaultSQLiteCoreDataStack.h; sourceTree = "<group>"; };
+		AA2C30D519B89D1B00B3C3DD /* MLDefaultSQLiteCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLDefaultSQLiteCoreDataStack.m; sourceTree = "<group>"; };
+		AA2C30D719B89D3400B3C3DD /* MLDefaultInMemoryCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLDefaultInMemoryCoreDataStack.h; sourceTree = "<group>"; };
+		AA2C30D819B89D3400B3C3DD /* MLDefaultInMemoryCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLDefaultInMemoryCoreDataStack.m; sourceTree = "<group>"; };
 		AA36C87E197CFADE00820E0A /* NSPredicate+ML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPredicate+ML.h"; sourceTree = "<group>"; };
 		AA36C87F197CFADE00820E0A /* NSPredicate+ML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPredicate+ML.m"; sourceTree = "<group>"; };
 		AA36C881197D068000820E0A /* NSSortDescriptor+ML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSortDescriptor+ML.h"; sourceTree = "<group>"; };
@@ -234,10 +240,14 @@
 				AAD034E11980FBB800B89A14 /* MLSQLiteCoreDataStack.m */,
 				AAD034EA19813F5B00B89A14 /* MLSavingContextSQLCoreDataStack.h */,
 				AAD034EB19813F5B00B89A14 /* MLSavingContextSQLCoreDataStack.m */,
+				AA2C30D419B89D1B00B3C3DD /* MLDefaultSQLiteCoreDataStack.h */,
+				AA2C30D519B89D1B00B3C3DD /* MLDefaultSQLiteCoreDataStack.m */,
 				AAD034E31981183400B89A14 /* MLInMemoryCoreDataStack.h */,
 				AAD034E41981183400B89A14 /* MLInMemoryCoreDataStack.m */,
 				AAD034F9198149AA00B89A14 /* MLSavingContextInMemoryCoreDataStack.h */,
 				AAD034FA198149AA00B89A14 /* MLSavingContextInMemoryCoreDataStack.m */,
+				AA2C30D719B89D3400B3C3DD /* MLDefaultInMemoryCoreDataStack.h */,
+				AA2C30D819B89D3400B3C3DD /* MLDefaultInMemoryCoreDataStack.m */,
 			);
 			name = "Core Data Stacks";
 			sourceTree = "<group>";
@@ -465,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD034E21980FBB800B89A14 /* MLSQLiteCoreDataStack.m in Sources */,
+				AA2C30D619B89D1B00B3C3DD /* MLDefaultSQLiteCoreDataStack.m in Sources */,
 				AADB746B1977F375000BAED8 /* NSManagedObject+ML_Finders.m in Sources */,
 				AA548BA51988D53300C0CB98 /* MLActiveRecordUtilities.m in Sources */,
 				AA36C880197CFADE00820E0A /* NSPredicate+ML.m in Sources */,
@@ -475,6 +486,7 @@
 				AA2AF3CF1986373700506502 /* MLCoreDataStack+ML_Saves.m in Sources */,
 				AADB74711977F494000BAED8 /* NSManagedObject+ML_Serialization.m in Sources */,
 				AA36C88A197D22EC00820E0A /* MLCoreDataStack.m in Sources */,
+				AA2C30D919B89D3400B3C3DD /* MLDefaultInMemoryCoreDataStack.m in Sources */,
 				AADB74741977F8C1000BAED8 /* NSManagedObjectContext+ML.m in Sources */,
 				98027CFD199E32E200BF3209 /* MLCoreDataStack+ML_Errors.m in Sources */,
 				98474601199149A600BCA1DA /* NSManagedObject+ML_Request.m in Sources */,

@@ -12,20 +12,20 @@
 
 #define CALL_COMPLETION_BLOCK(onMainThread, block, isSuccess, error) \
 if (!block) { \
-return; \
+    return; \
 } \
 else if (onMainThread) { \
-if ([NSThread isMainThread]) { \
-block(isSuccess, error); \
+    if ([NSThread isMainThread]) { \
+        block(isSuccess, error); \
+    } \
+    else { \
+        dispatch_async(dispatch_get_main_queue(), ^{ \
+            block(isSuccess, error); \
+        }); \
+    } \
 } \
 else { \
-dispatch_async(dispatch_get_main_queue(), ^{ \
-block(isSuccess, error); \
-}); \
-} \
-} \
-else { \
-block(isSuccess, error); \
+    block(isSuccess, error); \
 } \
 
 @implementation NSManagedObjectContext (ML_Saves)

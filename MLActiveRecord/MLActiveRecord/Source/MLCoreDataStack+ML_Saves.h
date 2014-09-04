@@ -11,6 +11,8 @@
 
 @interface MLCoreDataStack (ML_Saves)
 
+- (NSManagedObjectContext *)stackSavingContext;
+
 - (void)saveWithBlock:(void(^)(NSManagedObjectContext * context))block;
 - (void)saveWithBlock:(void(^)(NSManagedObjectContext * context))block completion:(MLSaveCompletionHandler)completion;
 
