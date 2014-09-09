@@ -9,15 +9,15 @@
 
 extern NSString * const MLManagedObjectSerializingErrorDomain;
 
-typedef enum {
-    MLManagedObjectSerializngErrorNoClassFound = 1,
+typedef NS_ENUM(NSUInteger, MLManagedObjectSerializngError) {
+    MLManagedObjectSerializngErrorNoClassFound,
     MLManagedObjectSerializngErrorInitializationFailed,
     MLManagedObjectSerializngErrorInvalidManagedObjectKey,
     MLManagedObjectSerializngErrorUnsupportedManagedObjectPropertyType,
     MLManagedObjectSerializngErrorUniqueFetchRequestFailed,
     MLManagedObjectSerializngErrorUnsupportedRelationshipClass,
     MLManagedObjectSerializngErrorInvalidManagedObjectMapping
-} MLManagedObjectSerializngError;
+};
 
 #pragma mark - MLManagedObjectSerializing
 
