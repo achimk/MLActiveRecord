@@ -11,7 +11,7 @@
  *  Simple Logging
  */
 #ifdef ML_LOGGING_ENABLED
-    #defineMLLog
+    #define MLLog NSLog
 #else
     #define MLLog(...)
 #endif

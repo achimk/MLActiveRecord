@@ -7,13 +7,15 @@
 
 #import "MLCoreDataStack+ML_Saves.h"
 
+#import "NSManagedObjectContext+ML.h"
+
 @implementation MLCoreDataStack (ML_Saves)
 
 + (dispatch_queue_t)saveDispatchQueue {
     static dispatch_queue_t saveDispatchQueue = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        saveDispatchQueue = dispatch_queue_create(ML_QUEUE_NAME("MlCoreDataStack.saveQueue"), DISPATCH_QUEUE_SERIAL);
+        saveDispatchQueue = dispatch_queue_create(ML_QUEUE_NAME("MLCoreDataStack.saveQueue"), DISPATCH_QUEUE_SERIAL);
     });
     
     return saveDispatchQueue;
@@ -21,21 +23,29 @@
 
 #pragma mark Save Additions
 
+- (NSManagedObjectContext *)stackSavingContext {
+    return self.managedObjectContext;
+}
+
 - (void)saveWithBlock:(void(^)(NSManagedObjectContext * context))block {
     [self saveWithBlock:block completion:nil];
 }
 
 - (void)saveWithBlock:(void(^)(NSManagedObjectContext * context))block completion:(MLSaveCompletionHandler)completion {
-    NSParameterAssert(block);
     
-    dispatch_queue_t saveQueue = [[self class] saveDispatchQueue];
-    dispatch_async(saveQueue, ^{
-        @autoreleasepool {
-            NSManagedObjectContext * localContext = [self newConfinementContext];
-            block(localContext);
-            [localContext ml_saveWithOptions:MLSaveSynchronously | MLSaveCompleteOnMainDispatchQueue | MLSaveParentContexts completion:completion];
+#warning Should we check for confinamed context and dispatch on saveDispatchQueue?
+    
+    NSManagedObjectContext * context = self.stackSavingContext;
+    NSAssert(context, @"Stack saving context is Nil");
+    void (^processBlock)(void) = ^{
+        if (block) {
+            block(context);
         }
-    });
+    };
+    
+    [context ml_saveWithOptions:MLSaveSynchronously | MLSaveCompleteOnMainDispatchQueue | MLSaveParentContexts
+                          block:processBlock
+                     completion:completion];
 }
 
 - (BOOL)saveWithBlockAndWait:(void (^)(NSManagedObjectContext * context))block {
@@ -43,20 +53,21 @@
 }
 
 - (BOOL)saveWithBlockAndWait:(void (^)(NSManagedObjectContext * context))block error:(NSError **)error {
-    NSParameterAssert(block);
+    NSManagedObjectContext * context = self.stackSavingContext;
+    NSAssert(context, @"Stack saving context is Nil");
+
+#warning Should we check for confinamed context and dispatch on saveDispatchQueue?
     
-    NSManagedObjectContext * localContext = [self newConfinementContext];
-    block(localContext);
-    
-    if (!localContext.hasChanges) {
-        return NO;
+    if (block) {
+        [context ml_performBlockAndWait:^{
+            block(context);
+        }];
     }
     
     __block BOOL saveSuccess = YES;
-
-    [localContext ml_saveWithOptions:MLSaveSynchronously | MLSaveParentContexts | MLSaveCompleteOnMainDispatchQueue completion:^(BOOL isSuccess, NSError *saveError) {
+    [context ml_saveWithOptions:MLSaveSynchronously | MLSaveParentContexts | MLSaveCompleteOnMainDispatchQueue completion:^(BOOL isSuccess, NSError * saveError) {
         saveSuccess = isSuccess;
-
+        
         if (error) {
             *error = saveError;
         }

@@ -9,7 +9,7 @@
 
 @interface MLSavingContextInMemoryCoreDataStack : MLInMemoryCoreDataStack
 
-@property (nonatomic, readonly, strong) NSManagedObjectContext * savingContext;
+@property (nonatomic, readonly, strong) NSManagedObjectContext * persistentContext;
 @property (nonatomic, readonly, strong) NSManagedObjectContext * mainContext;
 
 @end

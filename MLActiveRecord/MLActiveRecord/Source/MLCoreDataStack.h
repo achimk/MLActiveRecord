@@ -30,14 +30,12 @@
 + (NSDictionary *)defaultStoreOptions;
 
 - (void)loadStack;
-- (NSManagedObjectContext *)newConfinementContext;
 
 @end
 
 @interface MLCoreDataStack (MLSubclassOnly)
 
 - (NSPersistentStoreCoordinator *)createPersistentStoreCoordinator;
-- (NSManagedObjectContext *)createConfinementContext;
 
 @end
 

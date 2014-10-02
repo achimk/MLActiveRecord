@@ -67,10 +67,8 @@
     return _backgroundContext;
 }
 
-- (NSManagedObjectContext *)newConfinementContext {
-    NSManagedObjectContext * context = [self createConfinementContext];
-    context.parentContext = self.backgroundContext;
-    return context;
+- (NSManagedObjectContext *)stackSavingContext {
+    return self.backgroundContext;
 }
 
 @end

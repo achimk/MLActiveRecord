@@ -9,16 +9,17 @@
 
 #import "NSManagedObjectContext+ML.h"
 #import "NSManagedObjectContext+ML_Observing.h"
+#import "MLCoreDataStack+ML_Saves.h"
 
 @implementation MLSavingContextInMemoryCoreDataStack
 
-@synthesize savingContext = _savingContext;
+@synthesize persistentContext = _persistentContext;
 @synthesize mainContext = _mainContext;
 
 #pragma mark Dealloc
 
 - (void)dealloc {
-    [_mainContext ml_stopObservingContextDidSave:_savingContext];
+    [_mainContext ml_stopObservingContextDidSave:_persistentContext];
 }
 
 #pragma mark Load Stack
@@ -26,7 +27,7 @@
 - (void)loadStack {
     [super loadStack];
     
-    [self savingContext];
+    [self persistentContext];
     [self mainContext];
 }
 
@@ -43,33 +44,31 @@
         return self.mainContext;
     }
     else {
-        return self.savingContext;
+        return self.persistentContext;
     }
 }
 
-- (NSManagedObjectContext *)savingContext {
-    if (!_savingContext) {
-        _savingContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-        _savingContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
+- (NSManagedObjectContext *)persistentContext {
+    if (!_persistentContext) {
+        _persistentContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        _persistentContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
     }
     
-    return _savingContext;
+    return _persistentContext;
 }
 
 - (NSManagedObjectContext *)mainContext {
     if (!_mainContext) {
         _mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         _mainContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
-        [_mainContext ml_observeContextDidSave:self.savingContext];
+        [_mainContext ml_observeContextDidSave:self.persistentContext];
     }
     
     return _mainContext;
 }
 
-- (NSManagedObjectContext *)newConfinementContext {
-    NSManagedObjectContext * context = [self createConfinementContext];
-    context.parentContext = self.savingContext;
-    return context;
+- (NSManagedObjectContext *)stackSavingContext {
+    return self.persistentContext;
 }
 
 @end

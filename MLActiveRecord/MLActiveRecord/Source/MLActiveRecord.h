@@ -11,10 +11,14 @@
 #import "MLCoreDataStack.h"
 #import "MLCoreDataStack+ML_Saves.h"
 #import "MLCoreDataStack+ML_Errors.h"
+
 #import "MLSQLiteCoreDataStack.h"
 #import "MLSavingContextSQLCoreDataStack.h"
+#import "MLDefaultSQLiteCoreDataStack.h"
+
 #import "MLInMemoryCoreDataStack.h"
 #import "MLSavingContextInMemoryCoreDataStack.h"
+#import "MLDefaultInMemoryCoreDataStack.h"
 
 // ManagedObject Categories
 #import "NSManagedObject+ML.h"

@@ -81,11 +81,6 @@ static MLCoreDataStack * defaultStack = nil;
     return _managedObjectContext;
 }
 
-- (NSManagedObjectContext *)newConfinementContext {
-    NSManagedObjectContext * context = [self createConfinementContext];
-    return context;
-}
-
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
     if (!_persistentStoreCoordinator) {
         _persistentStoreCoordinator = [self createPersistentStoreCoordinator];
@@ -146,12 +141,6 @@ static MLCoreDataStack * defaultStack = nil;
 
 - (NSPersistentStoreCoordinator *)createPersistentStoreCoordinator {
     METHOD_MUST_BE_OVERRIDDEN;
-}
-
-- (NSManagedObjectContext *)createConfinementContext {
-    NSManagedObjectContext * context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSConfinementConcurrencyType];
-    context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy;
-    return context;
 }
 
 #pragma mark Notifications
